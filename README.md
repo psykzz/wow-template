@@ -52,3 +52,15 @@ workflow and package metadata common in recent `psykzz/wow-*` addons, and a
 focused Lua 5.1 lint configuration. Add capability checks, modular files, or
 libraries when the addon needs them rather than inheriting unrelated gameplay
 code or Retail-only APIs.
+
+Patterns worth adopting when a new addon grows:
+
+- Feature-detect divergent APIs instead of assuming all clients with a TOC
+  number behave alike, as in [CooldownAlert](https://github.com/psykzz/wow-cooldown-alert)
+  and AutoShare.
+- Split utility, core, UI, and slash-command files when their load order
+  matters, as in [GuildPriceCheck](https://github.com/psykzz/wow-guildpricecheck);
+  declare a required addon dependency in the TOC if one is actually needed.
+- Avoid claiming a shared slash command before checking whether another
+  addon owns it, as in [Way](https://github.com/psykzz/wow-way). This starter's
+  `/addonname` is deliberately unique until you rename it.
