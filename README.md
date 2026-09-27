@@ -8,9 +8,9 @@ as a smoke test. No libraries, SavedVariables, or external services are required
 1. Click **Use this template** on GitHub and create a repository (for example,
    `wow-my-addon`). Clone it outside the game's `AddOns` directory.
 2. Pick your addon's installed folder name (for example, `MyAddon`). Rename
-   `AddonName.toc` and `AddonName.lua` to match. Replace `AddonName` and
-   `ADDONNAME` in the TOC, Lua file, `.pkgmeta`, workflow, and this README;
-   change `/addonname` to your own slash command. The installed folder name
+   `AddonName.toc` and `AddonName.lua` to match. Replace `AddonName`,
+   `ADDONNAME`, and `/addonname` in the TOC, Lua file, `.pkgmeta`, workflow,
+   `AGENTS.md`, and this README. The installed folder name
    **must match the TOC filename**, regardless of the GitHub repository name.
 3. Edit the TOC title, notes, author, and interface number for the client you
    actually support. `16001` is the observed WoW Forever beta interface number
